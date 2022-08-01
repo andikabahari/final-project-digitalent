@@ -1,7 +1,7 @@
 module.exports = {
   // JWT secret
-  secret: "BuuBuuDesuWa",
+  secret: process.env.JWT_SECRET || 'mysecret',
 
   // Expires (in seconds)
-  expires: 3600
-};
+  expires: process.env.JWT_EXPR || 3600,
+}
