@@ -29,7 +29,7 @@ spec:
               mountPath: '/etc/mongo-secret'
               readOnly: true
             - name: mongo-data
-              mountPath: '/data/mongo'
+              mountPath: '/data/db'
           env:
             - name: MONGO_INITDB_ROOT_USERNAME
               valueFrom:
