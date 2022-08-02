@@ -20,7 +20,7 @@ spec:
             secretName: nodejs-secret
       containers:
         - name: nodejs
-          image: docker.io/andikabahari/mern-server
+          image: quay.io/andikabahari/mern-server
           volumeMounts:
             - name: nodejs-secret
               mountPath: '/etc/nodejs-secret'
@@ -44,11 +44,11 @@ spec:
                   name: nodejs-secret
                   key: mongo_password
             - name: MONGO_IP
-              value: '10.80.10.60'
+              value: '$MONGO_IP'
             - name: MONGO_PORT
-              value: '27017'
+              value: '$MONGO_PORT'
             - name: MONGO_DB
-              value: 'mern'
+              value: '$MONGO_DB'
             - name: MONGO_URL
               value: "mongodb://$(MONGO_USERNAME):$(MONGO_PASSWORD)@$(MONGO_IP):$(MONGO_PORT)/$(MONGO_DB)"
             - name: PORT
