@@ -3,7 +3,7 @@
 # Set cluster credentials.
 CLUSTER_USERNAME=myusername
 CLUSTER_PASSWORD=mypassowrd
-CLUSTER_API="https://console-openshift-console.apps.ap46a.prod.ole.redhat.com"
+CLUSTER_API="https://api.ap46a.prod.ole.redhat.com:6443"
 
 # Set project name.
 PROJECT_NAME=myproject
