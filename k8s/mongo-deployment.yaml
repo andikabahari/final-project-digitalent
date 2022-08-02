@@ -23,7 +23,7 @@ spec:
             secretName: mongo-secret
       containers:
         - name: mongo
-          image: docker.io/library/mongo
+          image: quay.io/andikabahari/mongo
           volumeMounts:
             - name: mongo-secret
               mountPath: '/etc/mongo-secret'
