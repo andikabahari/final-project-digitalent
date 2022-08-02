@@ -42,7 +42,7 @@ oc apply -f ./k8s/nodejs-deployment.yaml
 oc apply -f ./k8s/nodejs-service.yaml
 NODEJS_IP=$(oc get svc nodejs-service -o json | jq -r '.spec.clusterIP')
 NODEJS_PORT=$(oc get svc nodejs-service -o json | jq -r '.spec.ports[0].port')
-NGINX_API="$NODEJS_IP:$NODEJS_PORT"
+NGINX_API="http://$NODEJS_IP:$NODEJS_PORT"
 
 # Set environment variables in nginx-deployment.yaml and
 # create nginx resources.
