@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: docker.io/andikabahari/mern-client
+          image: quay.io/andikabahari/mern-client
           env:
             - name: NGINX_API
-              value: 'http://10.80.5.12:5000'
+              value: '$NGINX_API'
           ports:
             - containerPort: 3000
