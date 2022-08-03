@@ -50,7 +50,7 @@ oc apply -f ./k8s/nodejs-service.yaml
 # Access nodejs service using route. 
 oc expose svc/nodejs-service
 NODEJS_HOST=$(oc get route nodejs-service -o json | jq -r '.spec.host')
-NGINX_API="http://$NODEJS_HOST"
+NGINX_API="http:\/\/$NODEJS_HOST"
 
 # Set environment variables in nginx-deployment.yaml and
 # create nginx resources.
