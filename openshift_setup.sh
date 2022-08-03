@@ -2,7 +2,7 @@
 
 # Set cluster credentials.
 CLUSTER_USERNAME=myusername
-CLUSTER_PASSWORD=mypassowrd
+CLUSTER_PASSWORD=mypassword
 CLUSTER_API="https://api.ap46a.prod.ole.redhat.com:6443"
 
 # Set project name.
