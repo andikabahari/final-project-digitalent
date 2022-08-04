@@ -26,7 +26,7 @@ MONGO_IP=$(oc get svc mongo-service -o json | jq -r '.spec.clusterIP')
 MONGO_PORT=$(oc get svc mongo-service -o json | jq -r '.spec.ports[0].port')
 MONGO_DB=mern
 
-sleep 30
+sleep 60
 
 # Create a new user for "mern" database.
 oc exec \
